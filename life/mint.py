@@ -77,10 +77,11 @@ class lifeDapp:
         return res
 
 if __name__ == '__main__':
-    privkey = 'xxxxxxx'
+    privkey = 'xxxxxxx' # 你的私钥
+    aff_addr = '' # 邀请地址
     account = web3.Account.from_key(privkey)
     rpc = Rpc('https://bsc-dataseed.binance.org', chainid=56)
-    life = lifeDapp(account, rpc)
+    life = lifeDapp(account, rpc, aff_addr)
     res = life.mint()
     print(res)
     
